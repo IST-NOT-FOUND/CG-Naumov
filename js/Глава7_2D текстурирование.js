@@ -93,8 +93,8 @@ function setTextures(){
 
         setupWebGL();
         draw();
-    }
-    image.src = "../Images/wall.png";
+    };
+    image.src = "../images/wall.PNG";
 
     shaderProgram.samplerUniform = gl.getUniformLocation(shaderProgram, "uSampler");
     gl.uniform1i(shaderProgram.samplerUniform, 0);
@@ -127,4 +127,4 @@ window.onload=function(){
 
         setTextures();
     }
-}
+};
