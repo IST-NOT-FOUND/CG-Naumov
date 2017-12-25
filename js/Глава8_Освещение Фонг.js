@@ -229,7 +229,7 @@ function setTextures(){
         handleTextureLoaded(image, texture);
     }
 
-    image.src = "../image/wall.png";
+    image.src = "../images/wall.png";
 
     shaderProgram.samplerUniform = gl.getUniformLocation(shaderProgram, "uSampler");
     gl.uniform1i(shaderProgram.samplerUniform, 0);
