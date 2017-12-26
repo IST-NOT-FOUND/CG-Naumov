@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Индивидуальное задание</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<div>
+    <h1>Глава 5, индивидуальное задание: кнопки изменения точки обзора</h1>
+    <button id="angle1but">
+        < Смещение
+
+    </button>
+
+    <button id="angle2but">
+        Смещение >
+    </button>
+
+    <button id="zoom+but">
+
+        +
+    </button>
+
+    <button id="zoom-but">
+        -
+    </button>
+</div>
+<canvas id="canvas3D" width="400" height="300">Ваш браузер не поддерживает элемент canvas</canvas>
+<script  type="text/javascript" src="../js/gl-matrix-min.js"></script>
+<!-- фрагментный шейдер -->
+<script id="shader-fs" type="x-shader/x-fragment">
+  void main(void) {
+    gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+  }
+</script>
+<!-- вершинный шейдер -->
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+   uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
+  void main(void) {
+     gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+  }
+</script>
+<script type="text/javascript"></script>
+<script src="../js/Индивидуальное задание к 5 главе.js"></script>
+
+
+</body>
+</html>
